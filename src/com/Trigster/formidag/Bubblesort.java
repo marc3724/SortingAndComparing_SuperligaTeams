@@ -1,10 +1,8 @@
 package com.Trigster.formidag;
 
 public class Bubblesort<E extends Comparable<E>> {
-    /**
-     * Bubble sort method
-     */
-    public Bubblesort(E[] list) {
+
+    public void Bubblesort(E[] list, objektComparator c) {
 
         boolean needNextPass = true;
 

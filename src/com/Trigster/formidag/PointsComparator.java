@@ -18,5 +18,5 @@ public class PointsComparator implements Comparator<Teams> {
 
 
 }
-
+*/
 //compValue = teamName.compareTo(t.teamName);

@@ -1,9 +1,6 @@
 package com.Trigster.formidag;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     //TODO Klubbens navn
@@ -24,23 +21,35 @@ public class Main {
         // Linje 25 laver array'et om til en ArrayList
         ArrayList<Teams> tabel2 = new ArrayList<>(Arrays.asList(tabel1));
 
-        TeamNameComparator tnc = new TeamNameComparator();
+        HashMap[] tabel3 = new HashMap[20];
+        Map<Teams,String>klubber = new HashMap<>();
+        klubber.put(Hashtable.get(Trainer.name));
+
+//_______________________________________________________________________________________________________________________
+        TeamNameComparator tnc= new TeamNameComparator();
         VictoryComparator vc = new VictoryComparator();
-        PointsComparator pc = new PointsComparator();
+        objektComparator pc = new PointsComparator();
         GamesPlayedComparator gpc = new GamesPlayedComparator();
+        Bubblesort b10 = new Bubblesort();
+       /* b10.Bubblesort(tabel1, tnc);
+        for (int i = 0; i < tabel1.length ; i++) {
+            System.out.println(tabel1[i]);
+        }*/
+
+
 
             System.out.printf("\n%100s\n" + "%102s\n" + "%101s\n" + "%100s\n" ,
                 "1. Sort after Teams Names",
                 "2. Sort after Teams Victory",
                 "3. Sort after Teams Played" ,
-                "4. Sort after Teams Point");
+                "4. Sort after Teams Point");*/
 
-        System.out.println(
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1. Sort Team names in alphabetical order\n"+
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2. Sort Teams after number of Victories\n"+
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t3. Sort Teams after numbers of matches played\n" +
-                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t4. Sort Teams after number of Point\n");
 
+        System.out.printf("\n%115s\n" + "%114s\n" + "%120s\n" + "%110s\n",
+                "1. Sort Team names in alphabetical order",
+                "2. Sort Teams after number of Victories",
+                "3. Sort Teams after numbers of matches played" ,
+                "4. Sort Teams after number of Point");
 
         Scanner scan = new Scanner(System.in);
 
@@ -69,11 +78,14 @@ public class Main {
                         System.out.println(tabel2.get(i));
                     }
                     break;
+                case 5:
+
+                    break;
                 default:
                     System.out.println("input not recognized, please use an input from the list above");
             }
 
-/*
+        /*
         Bubblesort b1 = new Bubblesort(tabel1);
         for (int i = 0; i < tabel1.length; i++) {
             System.out.println(tabel1[i] + " ");

@@ -7,11 +7,11 @@ import java.util.Comparator;
 // TODO antal mængde af points                      Done
 
 //public class Teams <E extends Comparable<Teams>> {
-public class Teams implements Comparable <Teams> {
+public class Teams implements Comparable<Teams>  {
     String teamName;
     int victory;
     int played;
-    int points;
+    public int points;
     int compValue;
 
     public Teams(String teamName, int victory, int played, int points) {
@@ -34,9 +34,9 @@ public class Teams implements Comparable <Teams> {
     public int compareTo(Teams t) {
         compValue = teamName.compareTo(t.teamName);
         return compValue;
-/*
-        if (teamName.compareTo(t.teamName) == 0){
-            return 0;
+
+  /*      if (teamName.compareTo(t.teamName) == 0){
+            return compValue;
         }
         else if (teamName.compareTo(t.teamName) > 0){
             return 1;
@@ -45,8 +45,8 @@ public class Teams implements Comparable <Teams> {
             return -1;
         }
     }
-    */
-/*
+
+
     public int compareTo(Teams t) {
         //compValue = teamName.compareTo(t.teamName);
         //return compValue;
